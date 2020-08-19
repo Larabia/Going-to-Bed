@@ -70,3 +70,31 @@ echo $moose_PJs->describe()."\n";
 
 $moose_PJs->toggleButtons();
 echo $moose_PJs->describe()."\n";
+
+//HoodiePajamas class
+
+class HoodiePajamas extends Pajamas{
+   
+   private $hoddieOn = FALSE;
+
+   public function describe(){
+     if($this->hoddieOn === FALSE){
+       return parent::describe(). " The hoddie is off.";
+     }else{
+       return parent::describe(). " The hoddie is on.";
+     }
+    
+  }
+
+  public function putHoddie(){
+    $this->hoddieOn=TRUE;
+}
+}
+
+//TEST HoodiePajamas class
+$dog_PJs = new HoodiePajamas("Dog", "lose", "green");
+echo $dog_PJs->describe()."\n";
+
+$dog_PJs->putHoddie();
+echo $dog_PJs->describe()."\n";
+
