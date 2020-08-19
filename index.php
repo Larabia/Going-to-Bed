@@ -33,16 +33,21 @@ class Pajamas{
   }
 
   function setFit($fit){
-    $this->fit=$fit;
+      $fit_types=["tight","fine","loose"];
+      if (in_array($fit, $fit_types)){
+      $this->fit = $fit;
+    }else{
+      echo "Please enter a correct type of fit (tight-fine-loose).\n";
+    }
   }
 }
 
 //TESTING Pajamas class
 
-$chicken_PJs = new Pajamas("CHICKEN", "lose", "red");
+$chicken_PJs = new Pajamas("CHICKEN", "loose", "red");
 echo $chicken_PJs->describe()."\n";
 
-$chicken_PJs->setFit("tight");
+$chicken_PJs->setFit("lijl");
 echo $chicken_PJs->describe()."\n";
 
 //ButtonablePajamas class
@@ -65,7 +70,7 @@ class ButtonablePajamas extends Pajamas{
 }
 
 //TEST ButtonablePajamas class
-$moose_PJs = new ButtonablePajamas ("moose", "lose", "blue");
+$moose_PJs = new ButtonablePajamas ("moose", "fine", "blue");
 echo $moose_PJs->describe()."\n";
 
 $moose_PJs->toggleButtons();
@@ -92,7 +97,7 @@ class HoodiePajamas extends Pajamas{
 }
 
 //TEST HoodiePajamas class
-$dog_PJs = new HoodiePajamas("Dog", "lose", "green");
+$dog_PJs = new HoodiePajamas("Dog", "tight", "green");
 echo $dog_PJs->describe()."\n";
 
 $dog_PJs->putHoddie();
