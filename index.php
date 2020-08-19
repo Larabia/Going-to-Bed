@@ -50,4 +50,23 @@ echo $chicken_PJs->describe()."\n";
 class ButtonablePajamas extends Pajamas{
    
    private $button_state = "unbuttoned";
+
+   public function describe(){
+    return parent::describe(). "The pajama is $this->button_state.";
+  }
+
+  public function toggleButtons(){
+    if ($this->button_state === "unbuttoned") {
+    $this->button_state = "buttoned";
+  } else {
+    $this->button_state = "unbuttoned";
+  }
+  }
 }
+
+//TEST ButtonablePajamas class
+$moose_PJs = new ButtonablePajamas ("moose", "lose", "blue");
+echo $moose_PJs->describe()."\n";
+
+$moose_PJs->toggleButtons();
+echo $moose_PJs->describe()."\n";
