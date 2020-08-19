@@ -40,6 +40,22 @@ class Pajamas{
       echo "Please enter a correct type of fit (tight-fine-loose).\n";
     }
   }
+
+  function setOwner($owner){
+    $this->owner=$owner;
+  }
+
+  function gerOwner(){
+    return $this->owner;
+  }
+
+  function setColor($color){
+    $this->color=$color;
+  }
+
+  function getColor(){
+    return $this->color;
+  }
 }
 
 //TESTING Pajamas class
