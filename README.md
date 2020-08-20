@@ -13,3 +13,12 @@ In this project we will be creating some pajamas for barnyard animals. The farme
 * Some animals need their pajamas to have buttons so that they can put them on.
 * The status of the buttons should be (“buttoned” or “unbuttoned”).
 * For testing create an instance of buttoned pajamas for "moose".
+
+
+### Extra! 📋
+
+For additional practice:
+
+* A class of pajamas that has a hat
+* Performing validation on setFit to only allow “tight”, “fine”, and “loose”
+* Setter and getter methods for the owner and color properties
